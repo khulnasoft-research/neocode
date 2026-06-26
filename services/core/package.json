@@ -85,7 +85,6 @@
     "@neocode-ai/pkg-sdk": "workspace:*",
     "@neocode-ai/pkg-utils": "workspace:*",
     "@neocode-ai/plugin": "workspace:*",
-    "@neocode-ai/tool-cli": "workspace:*",
     "@octokit/graphql": "9.0.2",
     "@octokit/rest": "catalog:",
     "@openauthjs/openauth": "catalog:",
