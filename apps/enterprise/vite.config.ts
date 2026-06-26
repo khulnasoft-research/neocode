@@ -1,3 +1,4 @@
+import wasm from "vite-plugin-wasm"
 import { defineConfig, PluginOption } from "vite"
 import { solidStart } from "@solidjs/start/config"
 import { nitro } from "nitro/vite"
@@ -17,15 +18,30 @@ const nitroConfig: any = (() => {
   return {}
 })()
 
+const wasmPlugins = [wasm()]
+
 export default defineConfig({
   plugins: [
+    ...wasmPlugins,
     tailwindcss(),
     solidStart() as PluginOption,
     nitro({
       ...nitroConfig,
       baseURL: process.env.NEOCODE_BASE_URL,
+      rollupConfig: {
+        external: ["shiki"],
+      },
+      vite: {
+        plugins: wasmPlugins,
+        ssr: {
+          external: ["shiki"],
+        },
+      },
     }),
   ],
+  ssr: {
+    external: ["shiki"],
+  },
   server: {
     host: "0.0.0.0",
     allowedHosts: true,

@@ -36,10 +36,11 @@
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@typescript/native-preview": "catalog:",
     "@neocode-ai/tool-tsconfig": "workspace:*",
+    "@typescript/native-preview": "catalog:",
     "@webgpu/types": "0.1.54",
     "typescript": "catalog:",
+    "vite-plugin-wasm": "3.6.0",
     "wrangler": "4.59.1"
   },
   "engines": {

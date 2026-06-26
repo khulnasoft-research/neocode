@@ -1,9 +1,13 @@
+import wasm from "vite-plugin-wasm"
 import { defineConfig, PluginOption } from "vite"
 import { solidStart } from "@solidjs/start/config"
 import { nitro } from "nitro/vite"
 
+const wasmPlugins = [wasm()]
+
 export default defineConfig({
   plugins: [
+    ...wasmPlugins,
     solidStart({
       middleware: "./src/middleware.ts",
     }) as PluginOption,
@@ -13,8 +17,20 @@ export default defineConfig({
       cloudflare: {
         nodeCompat: true,
       },
+      rollupConfig: {
+        external: ["shiki"],
+      },
+      vite: {
+        plugins: wasmPlugins,
+        ssr: {
+          external: ["shiki"],
+        },
+      },
     }),
   ],
+  ssr: {
+    external: ["shiki"],
+  },
   server: {
     allowedHosts: true,
   },

@@ -30,13 +30,14 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "catalog:",
-    "@tailwindcss/vite": "catalog:",
-    "@typescript/native-preview": "catalog:",
     "@neocode-ai/tool-tsconfig": "workspace:*",
+    "@tailwindcss/vite": "catalog:",
     "@types/luxon": "catalog:",
+    "@typescript/native-preview": "catalog:",
     "tailwindcss": "catalog:",
     "typescript": "catalog:",
-    "vite": "catalog:"
+    "vite": "catalog:",
+    "vite-plugin-wasm": "3.6.0"
   },
   "engines": {
     "node": ">=22"
