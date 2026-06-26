@@ -20,12 +20,6 @@ export default defineConfig({
       rollupConfig: {
         external: ["shiki"],
       },
-      vite: {
-        plugins: wasmPlugins,
-        ssr: {
-          external: ["shiki"],
-        },
-      },
     }),
   ],
   ssr: {
