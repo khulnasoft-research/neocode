@@ -82,6 +82,7 @@ function createTestDb() {
   const migrations = entries
     .filter((entry) => entry.isDirectory())
     .map((entry) => ({
+      name: entry.name,
       sql: readFileSync(path.join(dir, entry.name, "migration.sql"), "utf-8"),
       timestamp: Number(entry.name.split("_")[0]),
     }))

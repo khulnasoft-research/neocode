@@ -1,17 +1,21 @@
 import path from "path"
-import { mkdir } from "fs/promises"
+import { mkdir, unlink } from "fs/promises"
 import { Log } from "../util/log"
 import { Global } from "../global"
 
 export namespace Discovery {
   const log = Log.create({ service: "skill-discovery" })
 
+  type IndexSkill = {
+    name: string
+    description: string
+    files?: string[]
+    url?: string
+    type?: "archive" | "skill-md"
+  }
+
   type Index = {
-    skills: Array<{
-      name: string
-      description: string
-      files: string[]
-    }>
+    skills: IndexSkill[]
   }
 
   export function dir() {
@@ -27,6 +31,23 @@ export namespace Discovery {
           return false
         }
         await Bun.write(dest, await response.text())
+        return true
+      })
+      .catch((err) => {
+        log.error("failed to download", { url, err })
+        return false
+      })
+  }
+
+  async function getBinary(url: string, dest: string): Promise<boolean> {
+    if (await Bun.file(dest).exists()) return true
+    return fetch(url)
+      .then(async (response) => {
+        if (!response.ok) {
+          log.error("failed to download", { url, status: response.status })
+          return false
+        }
+        await Bun.write(dest, await response.arrayBuffer())
         return true
       })
       .catch((err) => {
@@ -68,8 +89,12 @@ export namespace Discovery {
     }
 
     const list = data.skills.filter((skill) => {
-      if (!skill?.name || !Array.isArray(skill.files)) {
+      if (!skill?.name) {
         log.warn("invalid skill entry", { url: index, skill })
+        return false
+      }
+      if (!Array.isArray(skill.files) && !skill.url) {
+        log.warn("skill entry has no files or url", { url: index, skill })
         return false
       }
       return true
@@ -78,14 +103,31 @@ export namespace Discovery {
     await Promise.all(
       list.map(async (skill) => {
         const root = path.join(cache, skill.name)
-        await Promise.all(
-          skill.files.map(async (file) => {
-            const link = new URL(file, `${host}/${skill.name}/`).href
-            const dest = path.join(root, file)
-            await mkdir(path.dirname(dest), { recursive: true })
-            await get(link, dest)
-          }),
-        )
+
+        if (Array.isArray(skill.files)) {
+          await Promise.all(
+            skill.files.map(async (file) => {
+              const link = new URL(file, `${host}/${skill.name}/`).href
+              const dest = path.join(root, file)
+              await mkdir(path.dirname(dest), { recursive: true })
+              await get(link, dest)
+            }),
+          )
+        } else if (skill.url) {
+          await mkdir(root, { recursive: true })
+          if (skill.type === "archive") {
+            const archiveUrl = new URL(skill.url, base).href
+            const archivePath = path.join(root, "archive.tar.gz")
+            const ok = await getBinary(archiveUrl, archivePath)
+            if (ok) {
+              const proc = Bun.spawnSync(["tar", "-xzf", archivePath, "-C", root])
+              if (proc.exitCode === 0) await unlink(archivePath)
+            }
+          } else {
+            const mdUrl = new URL(skill.url, base).href
+            await get(mdUrl, path.join(root, "SKILL.md"))
+          }
+        }
 
         const md = path.join(root, "SKILL.md")
         if (await Bun.file(md).exists()) result.push(root)
