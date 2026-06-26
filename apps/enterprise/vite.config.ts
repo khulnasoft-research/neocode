@@ -28,6 +28,7 @@ export default defineConfig({
     nitro({
       ...nitroConfig,
       baseURL: process.env.NEOCODE_BASE_URL,
+      inlineDynamicImports: true,
       rollupConfig: {
         external: ["shiki"],
       },
