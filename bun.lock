@@ -112,14 +112,13 @@
       },
       "devDependencies": {
         "@cloudflare/workers-types": "catalog:",
-        "@neocode-ai/tool-tsconfig": "workspace:*",
         "@tailwindcss/vite": "catalog:",
+        "@types/bun": "catalog:",
         "@types/luxon": "catalog:",
         "@typescript/native-preview": "catalog:",
         "tailwindcss": "catalog:",
         "typescript": "catalog:",
         "vite": "catalog:",
-        "vite-plugin-wasm": "3.6.0",
       },
     },
     "apps/ext-vscode": {

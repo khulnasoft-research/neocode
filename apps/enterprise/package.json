@@ -7,8 +7,8 @@
   "scripts": {
     "typecheck": "tsgo --noEmit",
     "dev": "vite dev",
-    "build": "bun --bun vite build",
-    "build:cloudflare": "NEOCODE_DEPLOYMENT_TARGET=cloudflare bun --bun vite build",
+    "build": "vite build",
+    "build:cloudflare": "NEOCODE_DEPLOYMENT_TARGET=cloudflare vite build",
     "start": "vite start"
   },
   "dependencies": {
@@ -30,14 +30,13 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "catalog:",
-    "@neocode-ai/tool-tsconfig": "workspace:*",
     "@tailwindcss/vite": "catalog:",
-    "@types/luxon": "catalog:",
     "@typescript/native-preview": "catalog:",
+    "@types/bun": "catalog:",
+    "@types/luxon": "catalog:",
     "tailwindcss": "catalog:",
     "typescript": "catalog:",
-    "vite": "catalog:",
-    "vite-plugin-wasm": "3.6.0"
+    "vite": "catalog:"
   },
   "engines": {
     "node": ">=22"

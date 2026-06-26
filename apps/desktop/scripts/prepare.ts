@@ -1,7 +1,7 @@
 #!/usr/bin/env bun
 import { $ } from "bun"
 
-import { Script } from "@neocode-ai/script"
+import { Script } from "@neocode-ai/tool-cli"
 import { copyBinaryToSidecarFolder, getCurrentSidecar, windowsify } from "./utils"
 
 const pkg = await Bun.file("./package.json").json()
