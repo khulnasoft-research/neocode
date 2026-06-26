@@ -13,6 +13,7 @@
     "prepare": "husky install",
     "bootstrap": "bun install",
     "build": "bun turbo build",
+    "build:sequential": "bun turbo build --concurrency=1",
     "format": "prettier --write .",
     "clean": "rm -rf node_modules .turbo",
     "test:workspaces": "bun turbo test --filter=!@neocode-ai/app-ext-vscode",
