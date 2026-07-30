@@ -13,8 +13,7 @@ export const anacondaDesktopDict = {
   "provider.anaconda.status.attention": "需要注意",
   "provider.anaconda.status.unavailable": "無法使用",
   "provider.anaconda.state.unsupported": "Anaconda Desktop 不支援 {{platform}}。",
-  "provider.anaconda.state.notInstalled":
-    "請在此機器上安裝 Anaconda Desktop，然後返回此處。Neo 不會為您執行安裝程式。",
+  "provider.anaconda.state.notInstalled": "請在此機器上安裝 Anaconda Desktop，然後返回此處。Neo 不會為您執行安裝程式。",
   "provider.anaconda.state.notRunning": "請開啟 Anaconda Desktop，完成設定並登入，然後選擇再次檢查。",
   "provider.anaconda.state.invalidConfig":
     "Anaconda Desktop 設定尚未完成。請開啟 Desktop，完成設定，並在需要時重新啟動它。",
@@ -1677,8 +1676,7 @@ export const dict = {
   // legacy-migration start
   "settings.legacyMigration.link": "從舊版遷移",
   "settings.aboutneocode.legacyMigration.title": "舊版遷移",
-  "settings.aboutneocode.legacyMigration.description":
-    "從舊版 Neo Code 安裝遷移設定，包括供應商 API 金鑰和預設模型。",
+  "settings.aboutneocode.legacyMigration.description": "從舊版 Neo Code 安裝遷移設定，包括供應商 API 金鑰和預設模型。",
   "settings.aboutneocode.rooImport.description": "從 Roo Code 安裝匯入對話歷史記錄。",
   "settings.aboutneocode.rooImport.button": "從 Roo Code 匯入工作階段",
 

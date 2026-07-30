@@ -13,8 +13,7 @@ export const anacondaDesktopDict = {
   "provider.anaconda.status.attention": "需要处理",
   "provider.anaconda.status.unavailable": "不可用",
   "provider.anaconda.state.unsupported": "{{platform}} 不支持 Anaconda Desktop。",
-  "provider.anaconda.state.notInstalled":
-    "请在此设备上安装 Anaconda Desktop，然后返回此处。Neo 不会为你运行安装程序。",
+  "provider.anaconda.state.notInstalled": "请在此设备上安装 Anaconda Desktop，然后返回此处。Neo 不会为你运行安装程序。",
   "provider.anaconda.state.notRunning": "请打开 Anaconda Desktop，完成设置并登录，然后选择“再次检查”。",
   "provider.anaconda.state.invalidConfig":
     "Anaconda Desktop 设置不完整。请打开 Desktop，完成设置，并在需要时重新启动它。",
@@ -1543,8 +1542,7 @@ export const dict = {
   "settings.agentBehaviour.workflows.detail.description": "描述",
   "settings.agentBehaviour.workflows.detail.template": "模板",
   "settings.sandboxing.enabled.title": "沙盒",
-  "settings.sandboxing.enabled.description":
-    "在操作系统级沙盒中运行代理 shell 命令，将写入限制在项目和 Neo 状态目录内",
+  "settings.sandboxing.enabled.description": "在操作系统级沙盒中运行代理 shell 命令，将写入限制在项目和 Neo 状态目录内",
 
   "settings.autoApprove.description":
     "定义工具的运行权限。大多数工具默认为「允许」。doom_loop 和 external_directory 默认为「询问」。",
@@ -1671,8 +1669,7 @@ export const dict = {
   // legacy-migration start
   "settings.legacyMigration.link": "从旧版迁移",
   "settings.aboutneocode.legacyMigration.title": "旧版迁移",
-  "settings.aboutneocode.legacyMigration.description":
-    "从旧版 Neo Code 安装迁移设置，包括提供商 API 密钥和默认模型。",
+  "settings.aboutneocode.legacyMigration.description": "从旧版 Neo Code 安装迁移设置，包括提供商 API 密钥和默认模型。",
   "settings.aboutneocode.rooImport.description": "从 Roo Code 安装导入对话历史记录。",
   "settings.aboutneocode.rooImport.button": "从 Roo Code 导入会话",
 

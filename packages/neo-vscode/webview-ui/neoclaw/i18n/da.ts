@@ -14,16 +14,14 @@ export const dict = {
   "neoClaw.setup.subtitle": "Personlig AI til hverdagen",
   "neoClaw.setup.description1":
     "NeoClaw giver dig en personlig AI, der læser e-mails, administrerer din kalender, overvåger dine projekter og bor i Telegram, Slack \u2014 uanset hvad du allerede bruger.",
-  "neoClaw.setup.description2":
-    "Ingen app at installere. Ingen ny grænseflade at lære. Bare skriv til den som en ven.",
+  "neoClaw.setup.description2": "Ingen app at installere. Ingen ny grænseflade at lære. Bare skriv til den som en ven.",
   "neoClaw.setup.learnMore": "Læs mere",
   "neoClaw.setup.tryNeoClaw": "Prøv NeoClaw",
   "neoClaw.upgrade.title": "NeoClaw Chat kræver en opgradering",
   "neoClaw.upgrade.description1": "Denne instans blev klargjort, før chat blev aktiveret.",
   "neoClaw.upgrade.description2.before": "Brug ",
   "neoClaw.upgrade.description2.bold": "Opgrader til seneste",
-  "neoClaw.upgrade.description2.after":
-    "-knappen på NeoClaw-kontrolpanelet for at aktivere realtidschat med din bot.",
+  "neoClaw.upgrade.description2.after": "-knappen på NeoClaw-kontrolpanelet for at aktivere realtidschat med din bot.",
   "neoClaw.upgrade.openDashboard": "Åbn kontrolpanel",
   "neoClaw.sidebar.title": "NeoClaw",
   "neoClaw.sidebar.instance": "Instans",

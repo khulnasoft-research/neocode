@@ -131,9 +131,7 @@ describe("indexing feature detection", () => {
     expect(configFeatures({ plugin: ["@neocode/neo-indexing"] }).indexing).toBe(true)
     expect(configFeatures({ plugin: ["@neocode/neo-indexing@1.2.3"] }).indexing).toBe(true)
     expect(configFeatures({ plugin: ["file:///tmp/.opencode/plugin/neo-indexing.js"] }).indexing).toBe(true)
-    expect(configFeatures({ plugin: ["file:///tmp/node_modules/@neocode/neo-indexing/index.js"] }).indexing).toBe(
-      true,
-    )
+    expect(configFeatures({ plugin: ["file:///tmp/node_modules/@neocode/neo-indexing/index.js"] }).indexing).toBe(true)
   })
 
   it("ignores unrelated plugin lists", () => {

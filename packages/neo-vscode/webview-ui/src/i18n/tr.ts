@@ -1369,8 +1369,7 @@ export const dict = {
   "settings.browser.headless.title": "Başsız Mod",
   "settings.browser.headless.description": "Başsız modda çalıştır (görünür tarayıcı penceresi yok).",
 
-  "settings.language.description":
-    '"Otomatik" VS Code görüntüleme dilinizi kullanır. Neo Code arayüzü için dil seçin.',
+  "settings.language.description": '"Otomatik" VS Code görüntüleme dilinizi kullanır. Neo Code arayüzü için dil seçin.',
   "settings.language.auto": "Otomatik (VS Code dili)",
   "settings.language.current": "Mevcut:",
 

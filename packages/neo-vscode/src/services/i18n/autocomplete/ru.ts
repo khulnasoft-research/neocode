@@ -13,8 +13,7 @@ export const dict = {
   "neocode:autocomplete.statusBar.tooltip.defaultProfile": "По умолчанию",
   "neocode:autocomplete.statusBar.tooltip.completionSummary":
     "Выполнено {{count}} дополнений с {{startTime}} до {{endTime}}, общая стоимость {{cost}}.",
-  "neocode:autocomplete.statusBar.tooltip.providerInfo":
-    "Автодополнения предоставляются {{model}} через {{provider}}.",
+  "neocode:autocomplete.statusBar.tooltip.providerInfo": "Автодополнения предоставляются {{model}} через {{provider}}.",
   "neocode:autocomplete.statusBar.cost.zero": "$0.00",
   "neocode:autocomplete.statusBar.cost.lessThanCent": "<$0.01",
   "neocode:autocomplete.toggleMessage": "Автодополнение Neo Code {{status}}",

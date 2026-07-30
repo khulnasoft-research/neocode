@@ -1297,8 +1297,7 @@ export const dict = {
   "settings.aboutneocode.community": "Społeczność i wsparcie",
   "settings.aboutneocode.feedback.prefix": "Jeśli masz pytania lub uwagi, śmiało otwórz zgłoszenie na",
   "settings.aboutneocode.feedback.or": "lub",
-  "settings.aboutneocode.support.prefix":
-    "W sprawach rozliczeń lub konta skontaktuj się z obsługą klienta pod adresem",
+  "settings.aboutneocode.support.prefix": "W sprawach rozliczeń lub konta skontaktuj się z obsługą klienta pod adresem",
   "settings.aboutneocode.resetSettings.title": "Resetuj ustawienia",
   "settings.aboutneocode.resetSettings.description":
     "To resetuje tylko ustawienia specyficzne dla rozszerzenia VS Code do ich domyślnych wartości. Ustawienia współdzielone z CLI, takie jak tryby i reguły automatycznego zatwierdzania, są przechowywane w konfiguracji CLI i nie zostaną zresetowane.",
@@ -1399,8 +1398,7 @@ export const dict = {
   "settings.models.speechToText.disabledDescription":
     "Włącz i zaloguj się do dostawcy Neo, aby korzystać ze Speech to Text. Speech to Text jest obecnie obsługiwane tylko z Neo Gateway.",
   "settings.models.speechToTextModel.title": "Model mowy na tekst",
-  "settings.models.speechToTextModel.description":
-    "Wybierz model transkrypcji Neo Gateway dla wprowadzania głosowego.",
+  "settings.models.speechToTextModel.description": "Wybierz model transkrypcji Neo Gateway dla wprowadzania głosowego.",
   "settings.experimental.nativeNotebookTools.title": "Natywne narzędzia notatników",
   "settings.experimental.nativeNotebookTools.description":
     "Włącz eksperymentalne narzędzia do odczytu, edycji i uruchamiania notatników VS Code",
