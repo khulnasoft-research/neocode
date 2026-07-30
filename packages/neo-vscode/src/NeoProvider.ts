@@ -1345,9 +1345,7 @@ export class NeoProvider implements vscode.WebviewViewProvider, TelemetryPropert
           this.sendTimelineSetting()
           break
         case "requestNotifications":
-          this.fetchAndSendNotifications().catch((e) =>
-            console.error("[Neo New] fetchAndSendNotifications failed:", e),
-          )
+          this.fetchAndSendNotifications().catch((e) => console.error("[Neo New] fetchAndSendNotifications failed:", e))
           break
         case "requestCloudSessions":
           await handleRequestCloudSessions(this.cloudSessionCtx, message)

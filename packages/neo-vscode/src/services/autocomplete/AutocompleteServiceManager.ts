@@ -417,9 +417,7 @@ export class AutocompleteServiceManager {
    */
   private handleFatalAutocompleteError(status: number | null): void {
     const msg =
-      status === 402
-        ? t("neocode:autocomplete.creditsExhausted.message")
-        : t("neocode:autocomplete.authError.message")
+      status === 402 ? t("neocode:autocomplete.creditsExhausted.message") : t("neocode:autocomplete.authError.message")
 
     if (status === 402) {
       vscode.window.showWarningMessage(msg, t("neocode:autocomplete.creditsExhausted.addCredits")).then((choice) => {

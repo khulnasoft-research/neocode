@@ -146,9 +146,7 @@ async function ensureBuiltBinary(): Promise<string> {
   const found = await findNeoBinaryInOpencodeDist()
   if (found) return found
 
-  log(
-    `No prebuilt binary found under ${relative(neoVscodeDir, join(opencodeDir, "dist"))} - attempting build via bun.`,
-  )
+  log(`No prebuilt binary found under ${relative(neoVscodeDir, join(opencodeDir, "dist"))} - attempting build via bun.`)
 
   const bunPath = Bun.which("bun")
   if (!bunPath) {

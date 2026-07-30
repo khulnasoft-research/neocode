@@ -41,7 +41,7 @@ permissions:
 
 jobs:
   version:
-    runs-on: blacksmith-4vcpu-ubuntu-2404
+    runs-on: ubuntu-latest
     if: github.repository == 'Neopilot-Ai/neocode'
     steps:
       - uses: actions/checkout@v6 # neocode_change
@@ -77,7 +77,7 @@ jobs:
 
   build-cli:
     needs: version
-    runs-on: blacksmith-4vcpu-ubuntu-2404
+    runs-on: ubuntu-latest
     if: github.repository == 'Neopilot-Ai/neocode'
     steps:
       - uses: actions/checkout@v6 # neocode_change
@@ -325,7 +325,7 @@ jobs:
       - build-cli
       - validate-cli-unix
       - validate-cli-windows
-    runs-on: blacksmith-4vcpu-ubuntu-2404
+    runs-on: ubuntu-latest
     if: github.repository == 'Neopilot-Ai/neocode'
     steps:
       - uses: actions/checkout@v6 # neocode_change

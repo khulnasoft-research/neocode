@@ -1082,8 +1082,7 @@ export const dict = {
   "settings.config.title": "Открыть файл конфигурации Neo ({{scope}})",
   "settings.config.placeholder":
     "Файлы конфигурации объединяются по порядку; файлы, отмеченные как загруженные, в данный момент влияют на настройки.",
-  "settings.config.noWorkspace":
-    "Откройте папку рабочей области для редактирования локального файла конфигурации Neo.",
+  "settings.config.noWorkspace": "Откройте папку рабочей области для редактирования локального файла конфигурации Neo.",
   "settings.config.openFailed": "Не удалось открыть файл конфигурации Neo ({{scope}}): {{message}}",
   "settings.config.source.xdg": "Глобальная конфигурация XDG",
   "settings.config.source.homeNeo": "Конфигурация .neo (Home)",

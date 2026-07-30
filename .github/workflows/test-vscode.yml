@@ -21,7 +21,7 @@ on:
 jobs:
   unit:
     name: unit tests
-    runs-on: blacksmith-4vcpu-ubuntu-2404 # neocode_change
+    runs-on: ubuntu-latest # neocode_change
     defaults:
       run:
         shell: bash

@@ -25,9 +25,7 @@ type Case = {
   reason?: string
 }
 
-const cases = (await Bun.file(
-  new URL("../../../neo-memory/test/command-cases.json", import.meta.url),
-).json()) as Case[]
+const cases = (await Bun.file(new URL("../../../neo-memory/test/command-cases.json", import.meta.url)).json()) as Case[]
 
 function expected(item: Case): ParsedMemoryCommand | undefined {
   if (item.result === "none") return

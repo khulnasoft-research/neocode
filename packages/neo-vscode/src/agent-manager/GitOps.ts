@@ -76,6 +76,7 @@ export function nonInteractiveEnv(): NodeJS.ProcessEnv {
     ...process.env,
     GIT_TERMINAL_PROMPT: "0",
   }
+  delete env.GIT_EDITOR
   if (!process.env.GIT_SSH_COMMAND) {
     env.GIT_SSH_COMMAND = NEO_NON_INTERACTIVE_SSH_COMMAND
   }

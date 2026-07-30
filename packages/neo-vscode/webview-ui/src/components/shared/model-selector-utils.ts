@@ -18,9 +18,7 @@ interface Choice {
 }
 
 export function isAuto(model: Pick<EnrichedModel, "providerID" | "id">): boolean {
-  return (
-    model.providerID === NEO_GATEWAY_ID && (model.id.startsWith("neo-auto/") || NEO_AUTO_SMALL_IDS.has(model.id))
-  )
+  return model.providerID === NEO_GATEWAY_ID && (model.id.startsWith("neo-auto/") || NEO_AUTO_SMALL_IDS.has(model.id))
 }
 
 export function isAutoEfficient(model: Pick<EnrichedModel, "providerID" | "id">): boolean {
