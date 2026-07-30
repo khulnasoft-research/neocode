@@ -14,7 +14,7 @@ describe("sitemap.xml", () => {
     const locs = [...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map((m) => m[1])
     expect(locs.length).toBeGreaterThan(0)
     for (const loc of locs) {
-      expect(loc).toMatch(/^https:\/\/neo\.ai\/docs/)
+      expect(loc).toMatch(/^https:\/\/neo\.khulnasoft\.com\/docs/)
     }
   })
 
