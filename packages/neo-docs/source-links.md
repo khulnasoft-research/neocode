@@ -112,7 +112,7 @@
   <!-- packages/opencode/src/cli/cmd/generate.ts -->
   <!-- packages/opencode/src/neocode/server/httpapi/public.ts -->
   <!-- packages/opencode/src/provider/provider.ts -->
-- <https://neo.khulnasoft.com/cli/install>
+- <https://raw.githubusercontent.com/khulnasoft-research/neocode/refs/heads/main/install>
   <!-- packages/opencode/src/neocode/installation/index.ts -->
 - <https://neo.khulnasoft.com/discord>
   <!-- packages/neo-vscode/webview-ui/src/components/chat/FeedbackDialog.tsx -->

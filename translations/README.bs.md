@@ -46,7 +46,7 @@ Instalirajte [Neo Code ekstenziju](vscode:extension/neocode.neo-code) direktno i
 npm install -g @neocode/cli
 
 # curl
-curl -fsSL https://neo.khulnasoft.com/cli/install | bash
+curl -fsSL https://raw.githubusercontent.com/khulnasoft-research/neocode/refs/heads/main/install | bash
 
 # pnpm
 pnpm add -g @neocode/cli

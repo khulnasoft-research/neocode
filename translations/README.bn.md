@@ -46,7 +46,7 @@ Neo Code হলো একটি AI কোডিং এজেন্ট যা আ
 npm install -g @neocode/cli
 
 # curl
-curl -fsSL https://neo.khulnasoft.com/cli/install | bash
+curl -fsSL https://raw.githubusercontent.com/khulnasoft-research/neocode/refs/heads/main/install | bash
 
 # pnpm
 pnpm add -g @neocode/cli

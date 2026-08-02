@@ -21,5 +21,5 @@ export const Scoop = {
 }
 
 export const Release = {
-  install: "https://neo.khulnasoft.com/cli/install",
+  install: "https://raw.githubusercontent.com/khulnasoft-research/neocode/refs/heads/main/install",
 }

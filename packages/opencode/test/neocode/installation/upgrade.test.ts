@@ -214,7 +214,7 @@ describe("Neo installation upgrade", () => {
   ).effect("uses the Neo install script for curl upgrades", () =>
     Effect.gen(function* () {
       yield* Installation.Service.use((svc) => svc.upgrade("curl", "9.9.9"))
-      expect(curl).toContain("https://neo.khulnasoft.com/cli/install")
+      expect(curl).toContain("https://raw.githubusercontent.com/khulnasoft-research/neocode/refs/heads/main/install")
       expect(curl).toContain("sh")
     }),
   )

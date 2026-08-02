@@ -5,7 +5,7 @@ runs:
   using: "composite"
   steps:
     - name: Install Neo CLI
-      run: curl -fsSL https://neo.khulnasoft.com/cli/install | bash
+      run: curl -fsSL https://raw.githubusercontent.com/khulnasoft-research/neocode/refs/heads/main/install | bash
       shell: bash
 
     - name: Add Neo to PATH

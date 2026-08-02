@@ -46,7 +46,7 @@ Neo Code 是一个 AI 编码代理，可以在你工作的任何地方使用：[
 npm install -g @neocode/cli
 
 # curl
-curl -fsSL https://neo.khulnasoft.com/cli/install | bash
+curl -fsSL https://raw.githubusercontent.com/khulnasoft-research/neocode/refs/heads/main/install | bash
 
 # pnpm
 pnpm add -g @neocode/cli
